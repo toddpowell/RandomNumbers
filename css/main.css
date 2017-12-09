@@ -24,7 +24,7 @@ body {
 
 #numbers-container {
     display: inline-block;
-    /* visibility: hidden; */
+    visibility: hidden;
     /* background-color: #988265; */
     /* width: 50%; */
     /* background-color: grey; */

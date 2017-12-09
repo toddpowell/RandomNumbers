@@ -1,6 +1,6 @@
 let numberArray = Array.apply(0, Array(10000)).map(function (x, y) { return y + 1; });  // [1, 2, 3]
 function reloadNumbers() {
-    // $('#numbers-container').css("visibility", "hidden");
+    $('#numbers-container').css("visibility", "hidden");
     $("#number-list").empty();
     console.log(numberArray);
     shuffleArray(numberArray);
@@ -43,7 +43,7 @@ function showNumbers() {
 		}
 		 		 
     }
-    // $("#numbers-container").css("visibility", "visible");
+    $("#numbers-container").css("visibility", "visible");
 	//console.log("TTTTT:"+mytable.html());
 	//mytable.appendTo("#number-list");
 }
