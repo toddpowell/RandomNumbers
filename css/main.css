@@ -6,7 +6,6 @@
 #numbers-container {
     display: inline-block;
     width: 50%;
-    height: 400px;
     background-color: grey;
 }
 #numbers-title {
@@ -15,4 +14,32 @@
 }
 #reload-button {
     float: right;
+}
+
+#random-numbers {
+    text-align: center;
+    display: inline-block;
+}
+/* .row {
+    display:table-row;
+}
+
+.cell {
+  background: #CCC;
+  border-radius: 10px;
+  border: 2px solid #AAA;
+  display:table-cell;
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+} */
+
+table{
+    width:500px;
+    height:500px;
+}
+table td{
+    padding:10px;
+    margin:10px;
+    border:1px solid #ccc;
 }
