@@ -1,10 +1,21 @@
 body {
-    background-color: #dec8ab; /*#d2b48c;*/
+    /* background-color: #dec8ab; */
 }
 
 .navbar {
     background-color: #3e6c85; /*#5f513f;*/
 }
+#navbar-app-title {
+    font-size: 14px;
+    color: white;
+    padding-top: 4px;
+}
+.navbar-nav > li > a, .navbar-brand {
+    padding-top:4px !important; 
+    padding-bottom:0 !important;
+    height: 28px;
+}
+.navbar {min-height:28px !important;}
 
 #main-content {
     margin-top: 50px;
@@ -13,23 +24,31 @@ body {
 
 #numbers-container {
     display: inline-block;
-    background-color: #988265; /*#dec8ab;*/
+    /* visibility: hidden; */
+    /* background-color: #988265; */
     /* width: 50%; */
     /* background-color: grey; */
+}
+.items {
+    border: 1px solid black;
+    height: 483px;
 }
 #numbers-title {
     color: white;
     background-color: #3e6c85;
-    font-size: 32px;
+    font-size: 18px;
 }
 #reload-numbers-button {
     float: right;
-    margin-top: 5px;
+    width: 80px;
+    height: 20px;
+    padding: 0px;
+    margin-top: 3px;
     margin-right: 10px;
 }
 
 #random-numbers {
-    padding: 10px;
+    padding-top: 1px;
     text-align: center;
     display: inline-block;
 }
@@ -55,8 +74,9 @@ td{
     display: block;
     width: 50px;
     float: left;
-    /* padding: 5px;
-    margin:10px; */
-    border:1px solid #ccc;
-    /* color: white; */
+    border:1px solid black;
+    margin: 1px;
 }
+
+.odd > td	{ background-color:#eee; }
+.even > td	{ background-color: #bbb; }

@@ -6,7 +6,7 @@
 .pager div
 {
 	float: left;
-	border: 1px solid white;
+	border: 1px solid black;
 	margin: 5px;
 	padding: 10px;
 }
@@ -20,7 +20,7 @@
 {
 	display: inline-block;
 	padding: 0 10px;
-	color: white;
+	color: black;
 	font-weight: normal !important;
 }
 
@@ -47,5 +47,5 @@
 }
 
 .firstPage, .previousPage, .nextPage, .lastPage {
-	color: white;
+	color: black;
 }

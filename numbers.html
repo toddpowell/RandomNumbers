@@ -40,15 +40,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>                        
         </button>
+        <div id="navbar-app-title">Random Number Generator</div>
         </div>
-        <div class="collapse navbar-collapse navbar-left" id="myNavbar">
+        <div class="collapse navbar-collapse navbar-right" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="numbers.html">Numbers</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
-        <div><a class="navbar-brand" href="#">Title</a></div>        
+        <!-- <div><div><a class="navbar-brand" href="#">Title</a></div></div> -->
+        <!-- <button type="button" id="reload-numbers-button" class="btn btn-default">
+            <i class="fa fa-refresh"></i> Reload
+        </button> -->
     </div>
 </nav>
 
@@ -56,9 +60,9 @@
     <div id="numbers-container">
         <div id="numbers-title-bar">
         <div id="numbers-title">Random Numbers 1 through 10,000
-                <button type="button" id="reload-numbers-button" class="btn btn-default">
-                    <i class="fa fa-refresh"></i> Reload
-                </button>
+            <button type="button" id="reload-numbers-button" class="btn btn-default">
+                <i class="fa fa-refresh"></i> Reload
+            </button>
         </div>
         <div id="random-numbers" class="paginate">
             <div id="number-list" class="items"></div>
