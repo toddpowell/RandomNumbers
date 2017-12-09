@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://cdn.rawgit.com/mrk-j/paginga/v0.8.1/paginga.jquery.min.js"></script>
+    <script src="js/paginga/paginga.jquery.js"></script> 
+    <link rel="stylesheet" type="text/css" href="js/paginga/paginga.css">
+    <script src="js/main.js"></script> 
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                reloadNumbers();
+            });
+
+            reloadNumbers();
+
+            $(".paginate").paginga({
+                itemsPerPage: 2,	// Number of documents to show per page
+                maxPageNumbers: 10	// Number of page buttons to show.
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+
+<div id="main-content">
+    
+    <div class="paginate">
+        <div class="items">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+            <div>Item 7</div>
+            <div>Item 8</div>
+            <div>Item 9</div>
+            <div>Item 10</div>            
+        </div>
+        <div class="pager">
+            <div class="firstPage">&laquo;</div>
+            <div class="previousPage">&lsaquo;</div>
+            <div class="pageNumbers"></div>
+            <div class="nextPage">&rsaquo;</div>
+            <div class="lastPage">&raquo;</div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+</html>

@@ -1,0 +1,51 @@
+.pager {
+    /* display: none; */
+    display: inline-block !important;
+}
+
+.pager div
+{
+	float: left;
+	border: 1px solid white;
+	margin: 5px;
+	padding: 10px;
+}
+
+.pager div.disabled
+{
+	opacity: 0.25;
+}
+
+.pager .pageNumbers a
+{
+	display: inline-block;
+	padding: 0 10px;
+	color: white;
+	font-weight: normal !important;
+}
+
+.pager .pageNumbers a.active
+{
+	/*color: orange !important; */
+	text-decoration: underline !important;
+	font-weight: bold !important;
+}
+/*
+.pager 
+{
+	overflow: hidden;
+}
+*/
+
+.paginate-no-scroll .items div
+{
+	height: 250px;
+}
+
+.paginate {
+    text-align: center;
+}
+
+.firstPage, .previousPage, .nextPage, .lastPage {
+	color: white;
+}

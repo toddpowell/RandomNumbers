@@ -17,15 +17,17 @@ function shuffleArray(array) {
 }
 
 function showNumbers() {
-    $('#numbers-table').remove();
-	mytable = $('<table></table>').attr({ id: "numbers-table" });
-	var rows = 10;
-	var cols = 10;
+    // $('#numbers-table').remove();
+    $('#number-list').empty();
+    //mytable = $('<table></table>').attr({ id: "numbers-table" });
+    //myRow = $('</div>');
+	var rows = 500;
+	var cols = 20;
     var tr = [];
     let idx = 0;
 	for (var i = 0; i < rows; i++) {
 		// var row = $('<tr></tr>').attr({ class: ["class1", "class2", "class3"].join(' ') }).appendTo(mytable);
-        var row = $('<tr></tr>').appendTo(mytable);
+        var row = $('<div></div>').appendTo("#number-list");
         for (var j = 0; j < cols; j++) {
             //$('<td></td>').text("text1").appendTo(row); 
             $('<td></td>').text(numberArray[idx]).appendTo(row); 
@@ -33,6 +35,6 @@ function showNumbers() {
 		}
 		 		 
 	}
-	console.log("TTTTT:"+mytable.html());
-	mytable.appendTo("#random-numbers");
+	//console.log("TTTTT:"+mytable.html());
+	//mytable.appendTo("#number-list");
 }
