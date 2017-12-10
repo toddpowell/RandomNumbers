@@ -1,6 +1,7 @@
 .pager {
     /* display: none; */
-    display: inline-block !important;
+	display: inline-block !important;
+	background-color: #eee;
 }
 
 .pager div
@@ -29,6 +30,7 @@
 	/*color: orange !important; */
 	text-decoration: underline !important;
 	font-weight: bold !important;
+	font-size: 1.25em !important;
 }
 /*
 .pager 
@@ -48,4 +50,8 @@
 
 .firstPage a, .previousPage a, .nextPage a, .lastPage a {
 	color: black;
+}
+
+#update-pagination-items {
+	display: none;
 }

@@ -23,22 +23,22 @@
                 let newDevice = checkDevice($(window).width());
                 if (newDevice != device){
                     console.log("DEVICE CHANGE - RELOAD");
-                    location.reload();
+                    location.reload();                    
                 }
                 // console.log("width:  " + $(window).width()); // New width
                 // console.log("height: " + $(window).height()); // New height
             });
             $("#reload-numbers-button").click(function(){
-                // loadNumbers();
-                location.reload();
+                loadNumbers(device, windowWidth);
+                //location.reload();
             });
 
             loadNumbers(device, windowWidth);
 
-            // $(".paginate").paginga({
-            //     itemsPerPage: 20,	// Number of documents to show per page
-            //     maxPageNumbers: 10	// Number of page buttons to show.
-            // });
+            $(".paginate").paginga({
+                itemsPerPage: 20,	// Number of documents to show per page
+                maxPageNumbers: 10	// Number of page buttons to show.
+            });
         });
     </script>
 
@@ -86,7 +86,10 @@
                 <div class="pageNumbers"></div>
                 <div class="nextPage"><a href="#">&rsaquo;</a></div>
                 <div class="lastPage"><a href="#">&raquo;</a></div>
-            </div>            
+            </div> 
+            <button type="button" id="update-pagination-items" class="btn btn-default">
+                    <i class="fa fa-refresh"></i> Update
+            </button>           
         </div>
         
         </div>

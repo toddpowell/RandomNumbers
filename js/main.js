@@ -107,4 +107,11 @@ function showNumbers(device, width) {
         itemsPerPage: 20,	// Number of documents to show per page
         maxPageNumbers: maxPageNumbers	// Number of page buttons to show.
     });
+    $("#update-pagination-items").trigger("click");
 }
+
+
+// $(".paginate").paginga({
+//     itemsPerPage: 20,
+//     maxPageNumbers: maxPageNumbers
+// });
