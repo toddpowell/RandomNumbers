@@ -57,21 +57,28 @@ function showNumbers(device, width) {
     //mytable = $('<table></table>').attr({ id: "numbers-table" });
     //myRow = $('</div>');
     let cols = null;
+    let maxPageNumbers = null;
     switch(device) {
         case "phone":
-            cols = Math.floor(width/50)-1; // There are too many screen sizes on small phones. This will adjust.
-            break;
+            cols = Math.floor(width/50)-1;  // There are too many screen sizes on small phones. This will adjust.
+            maxPageNumbers = 3;             // !!! If you are testing this, you MUST refresh the browser when changing the screen size.
+            break;                          // This won't be a problem in production, because you can't resize a phone.
         case "mTablet":
-            cols = 10;
-            break;
+            // cols = 10;
+            cols = Math.floor(width/50)-1;  // There are too many screen sizes on tablets. This will adjust.
+            maxPageNumbers = 10;            // !!! If you are testing this, you MUST refresh the browser when changing the screen size.
+            break;                          // This won't be a problem in production, because you can't resize a tablet.
         case "lgTablet":
             cols = 15;
+            maxPageNumbers = 10;
             break;
         case "smDesktop":
             cols = 15;
+            maxPageNumbers = 10;
             break;
         default:
             cols = 20;
+            maxPageNumbers = 10;
             break;
     }
     console.log("cols: " + cols);
@@ -95,5 +102,9 @@ function showNumbers(device, width) {
     }
     $("#numbers-container").css("visibility", "visible");
 	//console.log("TTTTT:"+mytable.html());
-	//mytable.appendTo("#number-list");
+    //mytable.appendTo("#number-list");
+    $(".paginate").paginga({
+        itemsPerPage: 20,	// Number of documents to show per page
+        maxPageNumbers: maxPageNumbers	// Number of page buttons to show.
+    });
 }
