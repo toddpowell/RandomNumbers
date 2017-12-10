@@ -1,6 +1,19 @@
-body {
-    /* background-color: #dec8ab; */
-}
+#home-page::after {
+/* body::after { */
+    content: "";
+    background: url("../assets/images/numberpile.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.25;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;   
+  }
 
 .navbar {
     background-color: #3e6c85; /*#5f513f;*/
