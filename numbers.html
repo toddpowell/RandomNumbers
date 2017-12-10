@@ -35,10 +35,9 @@
 
             loadNumbers(device, windowWidth);
 
-            $(".paginate").paginga({
-                itemsPerPage: 20,	// Number of documents to show per page
-                maxPageNumbers: 10	// Number of page buttons to show.
-            });
+            $("#loading-spinner").hide();
+            $("#main-content").show();
+
         });
     </script>
 
@@ -70,6 +69,13 @@
     </div>
 </nav>
 
+<!-- Loading spinner -->
+<div id="loading-spinner" class="center">
+    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+        Loading...
+</div>
+
+<!-- Main content -->
 <div id="main-content">
     <div id="numbers-container">
         <div id="numbers-title-bar">
