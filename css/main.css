@@ -1,5 +1,5 @@
-#home-page::after {
-/* body::after { */
+/* #home-page::after { */
+body::after {
     content: "";
     background: url("../assets/images/numberpile.jpg");
     -webkit-background-size: cover;
