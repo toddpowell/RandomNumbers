@@ -58,14 +58,14 @@ function showNumbers(device, width) {
     let tr = [];
     let idx = 0;
 	for (let i = 0; i < rows; i++) {
-        let row = $('<div></div>').appendTo("#number-list");
+        let row = $('<div></div>').addClass("table-row").appendTo("#number-list");
         if (i % 2 === 0) {
             row.addClass("odd");
         } else {
             row.addClass("even");
         }
         for (let j = 0; j < cols; j++) {
-            $('<td></td>').text(numberArray[idx]).appendTo(row); 
+            if (numberArray[idx]) { $('<td></td>').text(numberArray[idx]).appendTo(row); }
             idx++;
 		}
 		 		 
@@ -76,4 +76,15 @@ function showNumbers(device, width) {
         maxPageNumbers: 5	// Number of page buttons to show.
     });
     $("#update-pagination-items").trigger("click");
+}
+
+function copyList() {
+  var dummy = document.createElement("input");
+  document.body.appendChild(dummy);
+  dummy.setAttribute("id", "dummy-id");
+  dummy.value = numberArray.toString();  
+  dummy.select();
+  document.execCommand("copy");
+  document.body.removeChild(dummy);
+  alert("List copied to clipboard");
 }

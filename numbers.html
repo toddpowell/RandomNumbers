@@ -43,6 +43,10 @@
             shuffleArray();
             showNumbers(device, windowWidth);
 
+            $("#copy-list-button").click(function(){
+                copyList();
+            });
+
             $("#loading-spinner").hide();
             $("#main-content").show();
         });
@@ -86,13 +90,17 @@
 <div id="main-content">
     <div id="numbers-container">
         <div id="numbers-title-bar">
-            <div id="numbers-title"><span>Random Numbers 1 through 10,000</span>
+            <div id="numbers-title">
+                <button type="button" id="copy-list-button" class="btn btn-default">
+                    <i class="fa fa-copy"></i> Copy
+                </button>
+                <span>Random Numbers 1 through 10,000</span>
                 <button type="button" id="shuffle-numbers-button" class="btn btn-default">
                     <i class="fa fa-refresh"></i> Shuffle
                 </button>
             </div>
         </div>
-        <div id="random-numbers" class="paginate">
+        <div id="random-numbers-table" class="paginate">
             <div id="number-list" class="items"></div>
             <div class="pager">
                 <div class="firstPage"><a href="#">&laquo;</a></div>
@@ -105,7 +113,6 @@
                     <i class="fa fa-refresh"></i> Update
             </button>           
         </div>
-        
     </div>
 </div>
 

@@ -24,19 +24,23 @@ body::after {
 .navbar {
     background-color: #3e6c85;
 }
+
 #navbar-app-title {
     font-size: 14px;
     color: white;
     padding-top: 4px;
 }
+
 .navbar-nav > li > a, .navbar-brand {
     padding-top:4px !important; 
     padding-bottom:0 !important;
     height: 28px;
 }
+
 .navbar-inverse .navbar-nav>.active>a {
     background-color: #0B3952;
 }
+
 .navbar {min-height:28px !important;}
 
 .jumbotron {
@@ -45,9 +49,11 @@ body::after {
     background-color: #3e6c85;
     color: white;
 }
+
 #home-page .jumbotron p {
     font-weight: bold;
 }
+
 #about-page .jumbotron p {
     text-align: left;
     font-weight: 400;
@@ -66,14 +72,21 @@ body::after {
     visibility: hidden;
 }
 
+#copy-list-button {
+    float: left;
+    width: 80px;
+    height: 20px;
+    padding: 0px;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
 #numbers-title {
     color: white;
     background-color: #3e6c85;
     font-size: 18px;
 }
-#numbers-title span {
-    margin-left: 90px;
-}
+
 #shuffle-numbers-button {
     float: right;
     width: 80px;
@@ -83,7 +96,7 @@ body::after {
     margin-right: 10px;
 }
 
-#random-numbers {
+#random-numbers-table {
     padding-top: 1px;
     text-align: center;
     display: inline-block;
@@ -92,12 +105,18 @@ body::after {
 #number-list {
     text-align: center;
 }
+
+.table-row {
+    text-align: left;
+}
+
 td{
     display: inline-block;
     width: 50px;
     border:1px solid black;
     margin: 1px;
     font-weight: bold;
+    text-align: center;
 }
 
 .odd > td	{ background-color:#eee; }
@@ -109,6 +128,7 @@ td{
 #about-page h2 {
     text-align: left;
 }
+
 .quote {
     font-style: italic;
 }
@@ -119,12 +139,14 @@ td{
 .center {
     margin: auto;
 } 
+
 #loading-spinner {
     font-size: 32px;
     width: 178px;
     margin-top: 10%;
     color: #3e6c85;
 }
+
 .glyphicon-refresh-animate {
     -animation: spin .7s infinite linear;
     -webkit-animation: spin2 .7s infinite linear;
@@ -151,5 +173,24 @@ td{
         padding-left: 22px;
         padding-top: 14px;
         font-size: 16px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    #copy-list-button,
+    #shuffle-numbers-button {
+        position: absolute;
+        top: 50px;
+        background-color: #3e6c85;
+        color: white;
+    }
+    #copy-list-button {
+        left: 20px;
+    }
+    #shuffle-numbers-button {
+        right: 20px;
+    }
+    #numbers-title span {
+        margin-left: 0px;
     }
 }
