@@ -17,24 +17,15 @@
 
     <script>
         $(document).ready(function(){
+
             let windowWidth = $(window).width();
             let device = checkDevice(windowWidth);
-
-            // $(window).resize(function() {
-            //     // This will execute whenever the window is resized
-            //     let newDevice = checkDevice($(window).width());
-            //     if (newDevice != device){
-            //         console.log("DEVICE CHANGE - RELOAD");
-            //         location.reload();                    
-            //     }
-            //     // console.log("width:  " + $(window).width()); // New width
-            //     // console.log("height: " + $(window).height()); // New height
-            // });
-            var id;
+            let id;
             $(window).resize(function() {
                 clearTimeout(id);
                 id = setTimeout(doneResizing, 500);                
             });
+
             function doneResizing(){
                 windowWidth = $(window).width();
                 let newDevice = checkDevice(windowWidth);
@@ -54,7 +45,6 @@
 
             $("#loading-spinner").hide();
             $("#main-content").show();
-
         });
     </script>
 
@@ -118,14 +108,5 @@
         
     </div>
 </div>
-
-<!-- <div class="row">
-    <div class="cell">Here is a grid of several cells. We want each cell to extend down to the bottom of the row.</div>
-    <div class="cell">This cell it too short. </div>
-</div>
-<div class="row">
-    <div class="cell">This cell should extend down to the bottom.</div>
-    <div class="cell">We don't want to use background images or javascript</div>
-</body> -->
 
 </html>

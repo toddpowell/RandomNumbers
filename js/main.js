@@ -1,27 +1,21 @@
 let numberArray = Array.apply(0, Array(10000)).map(function (x, y) { return y + 1; });  // [1, 2, 3]
 
 function checkDevice(width) {
-    console.log("width: " + width);
     let device = null;
     switch (true) {
         case (width < 550):
-        console.log("phone: less than 550");        
             device = "phone";
             break;
         case (width < 800):
-        console.log("mtablet: between 480 and 799");        
             device = "mTablet";
             break;
         case (width < 992):
-            console.log("ltablet: between 800 and 991");
             device = "lgTablet";
             break;
         case (width < 1080):
-            console.log("smDesktop: between 992 and 1079");
             device = "smDesktop";
             break;
         default:
-            console.log("lgDesktop: 1080+");
             device = "lgDesktop";
             break;
     }
@@ -59,9 +53,8 @@ function showNumbers(device, width) {
             cols = 20;
             break;
     }
-    console.log("cols: " + cols);
+    
     let rows = Math.ceil(10000/cols);
-    console.log("rows: " + rows);
     let tr = [];
     let idx = 0;
 	for (let i = 0; i < rows; i++) {
