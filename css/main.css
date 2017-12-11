@@ -158,3 +158,15 @@ td{
     from { transform: scale(1) rotate(0deg);}
     to { transform: scale(1) rotate(360deg);}
 }
+
+
+@media all and (max-width: 767px) {
+    #numbers-container {
+        margin-top: 28px;
+    }
+    #navbar-app-title {
+        padding-left: 22px;
+        padding-top: 14px;
+        font-size: 16px;
+    }
+}
