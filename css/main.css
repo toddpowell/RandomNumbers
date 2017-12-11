@@ -79,7 +79,7 @@ body::after {
 #numbers-title span {
     margin-left: 90px;
 }
-#reload-numbers-button {
+#shuffle-numbers-button {
     float: right;
     width: 80px;
     height: 20px;

@@ -18,22 +18,37 @@
             let windowWidth = $(window).width();
             let device = checkDevice(windowWidth);
 
+            // $(window).resize(function() {
+            //     // This will execute whenever the window is resized
+            //     let newDevice = checkDevice($(window).width());
+            //     if (newDevice != device){
+            //         console.log("DEVICE CHANGE - RELOAD");
+            //         location.reload();                    
+            //     }
+            //     // console.log("width:  " + $(window).width()); // New width
+            //     // console.log("height: " + $(window).height()); // New height
+            // });
+            var id;
             $(window).resize(function() {
-                // This will execute whenever the window is resized
-                let newDevice = checkDevice($(window).width());
-                if (newDevice != device){
-                    console.log("DEVICE CHANGE - RELOAD");
-                    location.reload();                    
-                }
-                // console.log("width:  " + $(window).width()); // New width
-                // console.log("height: " + $(window).height()); // New height
+                clearTimeout(id);
+                id = setTimeout(doneResizing, 500);                
             });
-            $("#reload-numbers-button").click(function(){
-                loadNumbers(device, windowWidth);
-                //location.reload();
+            function doneResizing(){
+                windowWidth = $(window).width();
+                let newDevice = checkDevice(windowWidth);
+                if ((newDevice != device)||(windowWidth < 800)){
+                    showNumbers(newDevice, windowWidth);                
+                    device = newDevice;             
+                }   
+            }
+
+            $("#shuffle-numbers-button").click(function(){
+                shuffleArray();
+                showNumbers(device, windowWidth);
             });
 
-            loadNumbers(device, windowWidth);
+            shuffleArray();
+            showNumbers(device, windowWidth);
 
             $("#loading-spinner").hide();
             $("#main-content").show();
@@ -63,7 +78,7 @@
             </ul>
         </div>
         <!-- <div><div><a class="navbar-brand" href="#">Title</a></div></div> -->
-        <!-- <button type="button" id="reload-numbers-button" class="btn btn-default">
+        <!-- <button type="button" id="shuffle-numbers-button" class="btn btn-default">
             <i class="fa fa-refresh"></i> Reload
         </button> -->
     </div>
@@ -80,7 +95,7 @@
     <div id="numbers-container">
         <div id="numbers-title-bar">
             <div id="numbers-title"><span>Random Numbers 1 through 10,000</span>
-                <button type="button" id="reload-numbers-button" class="btn btn-default">
+                <button type="button" id="shuffle-numbers-button" class="btn btn-default">
                     <i class="fa fa-refresh"></i> Shuffle
                 </button>
             </div>
